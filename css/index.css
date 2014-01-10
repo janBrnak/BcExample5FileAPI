@@ -1,0 +1,112 @@
+body {
+    background-color:#ffffff;
+    font-family:Helvetica, Arial, sans-serif;
+    font-size:14px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+h1 {
+    margin: 10px 0 15px 0;
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.app {
+    margin: 0 2%;
+}
+
+.loader {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000 url('../img/loader.gif') no-repeat center center;
+    opacity: 0.8;
+}
+
+div#errorMessage {
+    color: #b94a48;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0px 0px 24px 0px;
+}
+
+input[type=text],
+input[type=number] {
+    width: 250px;
+    padding: 6px 9px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #999999;
+    float: left;
+}
+
+div.form-element {
+    padding: 6px 18px 6px 12px;
+    position: relative;
+    float: left;
+}
+
+table {
+    min-width: 500px;
+}
+
+table th,
+table td {
+ text-align: left;
+}
+
+.breaker {
+    margin: 0px;
+    padding: 0px;
+    line-height: normal;
+    border: none;
+    height: 0px;
+    clear: both;
+}
+
+#content ul {
+    margin: 0;
+}
+
+#content ul li {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+#content ul li a{
+    font-weight: normal;;
+    font-size: 12px;
+}
+
+#content ul#listDirectories {
+
+}
+
+#content ul#listDirectories li {
+    list-style: square;
+    font-weight: bold;
+}
+
+#content ul#listFiles {
+
+}
+
+#content ul#listFiles li {
+    list-style: circle;
+    font-style: italic;
+}
