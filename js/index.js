@@ -52,29 +52,36 @@ var onSuccess = function(fs) {
     iDirectories.listDirectories();
     iFiles.listFiles();
     iFiles.writeFile('log.txt', text);
+    console.log(fileSystem.name);
+    console.log(fileSystem.root.name);
 };
-
-onLoad();
 
 // on load
 function onLoad() {
     loader = $(".loader");
-
     window.temp = {}
     window.storageInfo  = window.storageInfo || window.webkitStorageInfo;
     window.requestFileSystem  = window.requestFileSystem || window.webkitRequestFileSystem || window.mozRequestFileSystem;
     window.BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder;
 
-    // alokacia pamate
-    window.storageInfo.requestQuota(TYPE, SIZE,
-        // poziadam o pristup do sendbox uloziska
-        function(bytes) {
+    switch (DEVICE_TYPE) {
+        case 'mobile':
             window.requestFileSystem(TYPE, SIZE, onSuccess, onError);
-        },
-        function(error) {
-            console.log('ERROR', error);
-        }
-    );
+            break;
+        case 'browser':
+            // alokacia pamate
+            window.storageInfo.requestQuota(TYPE, SIZE,
+                // poziadam o pristup do sendbox uloziska
+                function(bytes) {
+                    window.requestFileSystem(TYPE, SIZE, onSuccess, onError);
+                },
+                function(error) {
+                    console.log('ERROR', error);
+                }
+            );
+            break;
+    }
+
 };
 
 function addDirectory(id) {

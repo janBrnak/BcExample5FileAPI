@@ -11,6 +11,7 @@ FilesManager.prototype = {
             this.path + name,                       // path with file name
             {create: true, exclusive: true},        // function settings
             function(file) {                        // function on success
+                this.listFiles();
                 console.log("SUCCESS: Create file");
             },
             this.errorHandler
@@ -20,8 +21,8 @@ FilesManager.prototype = {
     // nacita subor, ale nie obsah
     readFile: function (name) {
         this.fs.root.getFile (
-            this.path + name,                          // path with file name
-            {create: false},                                 // function settings
+            this.path + name,              // path with file name
+            {create: false},               // function settings
             function(file) {               // function on success
                 file.file (
                     function(file){
@@ -136,6 +137,11 @@ FilesManager.prototype = {
             this.errorHandler
         );
     },
+
+    // check if exist file
+    fileExist: function() {
+
+    }
 
     parseToHtml: function(entries) {
         var ul = document.getElementById(this.content);

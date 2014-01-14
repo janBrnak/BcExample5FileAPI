@@ -17,28 +17,28 @@
             <fieldset id="administration">
                 <legend>Administracia</legend>
                 <table>
+                    <tr><th colspan="2"><label for="textDirectory">Pridat priecinok: </label></th></tr>
                     <tr>
-                        <th><label for="textDirectory">Pridat priecinok: </label></th>
                         <td><input type="text" name="textDirectory" id="textDirectory" /></td>
                         <td><button onclick="addDirectory('textDirectory');">Ulozit</button></td>
                     </tr>
+                    <tr><th colspan="2"><label for="textFile">Pridat subor: </label></th></tr>
                     <tr>
-                        <th><label for="textFile">Pridat subor: </label></th>
                         <td><input type="text" name="textFile" id="textFile" /></td>
                         <td><button onclick="addFile('textFile');">Ulozit</button></td>
                     </tr>
+                    <tr><th colspan="2"><label for="uploadFile">Pridat obrazok: </label></th></tr>
                     <tr>
-                        <th><label for="uploadFile">Pridat obrazok: </label></th>
                         <td><input type="file" name="uploadFile" id="uploadFile" /></td>
                         <td><button onclick="uploadFile('uploadFile');">Ulozit</button></td>
                     </tr>
-                    <tr><td colspan="3">&nbsp;</td></tr>
+                    <tr><td colspan="2">&nbsp;</td></tr>
                     <tr>
-                        <td colspan="3">
+                        <td colspan="2">
                             <strong><label for="textDirectory">Nacitanie suboru: </label></strong><br />
                             <textarea name="log" id="log" readonly="readonly" rows="6" cols="50"></textarea>
                         </td>
-                    <tr><td colspan="3">&nbsp;</td></tr>
+                    <tr><td colspan="2">&nbsp;</td></tr>
                 </table>
             </fieldset>
             <br /><br />

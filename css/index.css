@@ -62,7 +62,8 @@ div.form-element {
 }
 
 table {
-    min-width: 500px;
+    min-width: 320px;
+    width: 100%;
 }
 
 table th,
